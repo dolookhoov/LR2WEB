@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
-<INPUT type="button" value="Window" OnClick="alert(window.status);">
-<INPUT type="button" value="Navigator" OnClick="alert(navigator.appVersion);">
-<INPUT type="button" value="Location" OnClick="alert(location.href	);">
-<INPUT type="button" value="Screen" OnClick="alert(screen.width);">
+<INPUT type="button" class = "buttonstyle" value="Window" OnClick="alert(window.status);">
+<INPUT type="button" class = "buttonstyle"value="Navigator" OnClick="alert(navigator.appVersion);">
+<INPUT type="button" class = "buttonstyle" value="Location" OnClick="alert(location.href	);">
+<INPUT type="button" class = "buttonstyle" value="Screen" OnClick="alert('Размер экрана: ' + screen.width + ' x ' + screen.height);">
 
 
 <style>
@@ -50,6 +50,17 @@ function swapLayers() {
   topImage.style.zIndex = bottomImage.style.zIndex;
   bottomImage.style.zIndex = tempZIndex;
 }
+
+// Функция для переключения стиля при наведении и отведении мыши
+    function toggleCellStyle(cell) {
+      if (cell.classList.contains("table-cell")) {
+        cell.className = "table-cell-alternate";
+      } else {
+        cell.className = "table-cell";
+      }
+  }
+
+
 </script>
 </head>
 
@@ -77,13 +88,27 @@ function swapLayers() {
           <p class="news"><span class="date">1944 год - </span>Начинается строительство специального объекта в пустыне Нью-Мексико, который получает название "Тринити".</p>
           <p class="news"><span class="date">1945 год - </span>Взрыв ядерной бомбы "Тринити" происходит в пустыне Нью-Мексико. Это первое испытание ядерного оружия в истории человечества.</p>
 
-<img src="C:/Games/image1.jpg" class="image" style="z-index: 3;"img.style.paddingLeft="1.5cm"; name="image1">
-<img src="C:/Games/image2.jpg" class="image" style="z-index: 2;"img.style.paddingLeft="1.5cm"; name="image2">
-<img src="C:/Games/image3.jpg" class="image" style="z-index: 1;"img.style.paddingLeft="1.5cm"; name="image3">
-    </main>
-  </div> 
+	<table>
+        <tr>
+          <td class="table-cell" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">Ячейка 11</td>
+          <td class="table-cell" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">Ячейка 12</td>
+          <td class="table-cell-alternate" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">Ячейка 13</td>
+        </tr>
+        <tr>
+          <td class="table-cell" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">Ячейка 21</td>
+          <td class="table-cell-alternate" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">Ячейка 22</td>
+          <td class="table-cell-alternate" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">Ячейка 23</td>
+        </tr>
+      </table>
+     
+<button class = "buttonstyle" onclick="hideMiddleImage()">Hide Middle Image</button>
+<button class = "buttonstyle" onclick="showMiddleImage()">Show Middle Image</button>
+<button class = "buttonstyle" onclick="swapLayers()">Swap Layers</button>
+
+<img src="image1.jpg" class="image" style="z-index: 3;"img.style.paddingLeft="1.5cm"; name="image1">
+<img src="image2.jpg" class="image" style="z-index: 2;"img.style.paddingLeft="1.5cm"; name="image2">
+<img src="image3.jpg" class="image" style="z-index: 1;"img.style.paddingLeft="1.5cm"; name="image3">
+</main>
+</div> 
 </body>
-<button onclick="hideMiddleImage()">Hide Middle Image</button>
-<button onclick="showMiddleImage()">Show Middle Image</button>
-<button onclick="swapLayers()">Swap Layers</button>
 </html>
