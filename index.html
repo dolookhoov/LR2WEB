@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<INPUT type="button" class = "buttonstyle" value="Window" OnClick="alert(window.status);">
+<INPUT type="button" class = "buttonstyle"value="Navigator" OnClick="alert(navigator.appVersion);">
+<INPUT type="button" class = "buttonstyle" value="Location" OnClick="alert(location.href	);">
+<INPUT type="button" class = "buttonstyle" value="Screen" OnClick="alert('Размер экрана: ' + screen.width + ' x ' + screen.height);">
+
+
+<style>
+  .image {
+    position: absolute;
+    margin: 0px 0px 0px  100px;
+  }
+</style>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>История создания ядерной бомбы</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="stylesheet" type="text/css" href="style.css" media="screen">
+  <script type="text/javascript">alert(document.lastModified)
+function changeStyle() {
+      var p = document.getElementById("second");
+      p.style.paddingRight = "3cm";
+      p.style.textIndent = "2.5cm";
+    }
+
+    function restoreStyle() {
+      var p = document.getElementById("second");
+      p.style.paddingRight = "1.5cm";
+      p.style.textIndent = "0.7cm";
+    }
+function hideMiddleImage() {
+  var middleImage = document.getElementsByName("image2")[0];
+  middleImage.style.display = "none";
+}
+
+function showMiddleImage() {
+  var middleImage = document.getElementsByName("image2")[0];
+  middleImage.style.display = "block";
+}
+
+function swapLayers() {
+  var topImage = document.getElementsByName("image1")[0];
+  var bottomImage = document.getElementsByName("image3")[0];
+  
+  var tempZIndex = topImage.style.zIndex;
+  topImage.style.zIndex = bottomImage.style.zIndex;
+  bottomImage.style.zIndex = tempZIndex;
+}
+
+// Функция для переключения стиля при наведении и отведении мыши
+    function toggleCellStyle(cell) {
+      if (cell.classList.contains("table-cell")) {
+        cell.className = "table-cell-alternate";
+      } else {
+        cell.className = "table-cell";
+      }
+  }
+
+
+</script>
+</head>
+
+<body>
+&nbsp;<div class="text">
+    <main>
+     <h1>Создание ядерной бомбы</h1>
+         <font onmouseover="this.style.color='red';this.style.fontFamily='Verdana'" onmouseout="this.style.color='black'; this.style.fontFamily='Times New Roman'; this.style.fontSize='13pt'"><p>Первая созданная ядерная бомба была известна под кодовым названием "Тринити" и была испытана в Соединенных Штатах Америки 16 июля 1945 года. Этот исторический момент произошел в рамках проекта Манхэттен, который был запущен во время Второй мировой войны с целью разработки ядерного оружия. </font> <br> </p>
+ 
+	        <p id="second" onmouseover="changeStyle()" onmouseout="restoreStyle()">Ядерная бомба "Тринити" была разработана и построена командой ученых под руководством американского физика Дж. Роберта Оппенгеймера. Бомба имела конструкцию, основанную на ядерном делении, которое происходит при расщеплении атомного ядра. <br> </p>
+
+	<p>Основным компонентом бомбы был плутоний-239, который был сжат до критической массы с помощью взрыва химического взрывчатого вещества. При достижении критической массы плутония-239 происходит цепная реакция деления атомов, освобождая огромное количество энергии. <br> </p>
+
+	<p>Взрыв ядерной бомбы "Тринити" произошел в пустыне Нью-Мексико и имел мощность около 20 килотонн тротилового эквивалента. В результате взрыва образовался грибовидный облако, достигнувшее высоты около 12 километров. Взрыв создал огромное разрушение в радиусе нескольких километров, полностью уничтожив все объекты в зоне поражения. <br> </p>
+
+	<p>Эксперимент "Тринити" стал первым испытанием ядерного оружия в истории человечества и подтвердил возможность создания такого мощного оружия. Этот момент также проложил путь для использования ядерного оружия в конце Второй мировой войны, когда США сбросили атомные бомбы на японские города Хиросиму и Нагасаки.
+</p>
+  
+        </details>&nbsp;<h2>Хронология создания ядерной бомбы</h2>
+          <p class="news"><span class="date">1939 год - </span>Альберт Эйнштейн и Лео Силлард пишут письмо президенту США Франклину Рузвельту, предупреждая о возможности создания ядерного оружия и рекомендуя начать исследования в этой области.</p>
+          <p class="news"><span class="date">1940 год - </span>Франклин Рузвельт создает комитет по урану, который станет основой для создания проекта Манхэттен.
+</p>
+          <p class="news"><span class="date">1942 год - </span>Проект Манхэттен официально запускается под руководством американского физика Дж. Роберта Оппенгеймера. Целью проекта является разработка ядерного оружия.</p>
+          <p class="news"><span class="date">1943 год - </span>Команда ученых решает использовать плутоний-239 в качестве основного компонента для ядерной бомбы.</p>
+          <p class="news"><span class="date">1944 год - </span>Начинается строительство специального объекта в пустыне Нью-Мексико, который получает название "Тринити".</p>
+          <p class="news"><span class="date">1945 год - </span>Взрыв ядерной бомбы "Тринити" происходит в пустыне Нью-Мексико. Это первое испытание ядерного оружия в истории человечества.</p>
+
+	<table>
+        <tr>
+          <td class="table-cell" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">Ячейка 11</td>
+          <td class="table-cell" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">Ячейка 12</td>
+          <td class="table-cell-alternate" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">Ячейка 13</td>
+        </tr>
+        <tr>
+          <td class="table-cell" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">Ячейка 21</td>
+          <td class="table-cell-alternate" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">Ячейка 22</td>
+          <td class="table-cell-alternate" onmouseover="toggleCellStyle(this)" onmouseout="toggleCellStyle(this)">Ячейка 23</td>
+        </tr>
+      </table>
+     
+<button class = "buttonstyle" onclick="hideMiddleImage()">Hide Middle Image</button>
+<button class = "buttonstyle" onclick="showMiddleImage()">Show Middle Image</button>
+<button class = "buttonstyle" onclick="swapLayers()">Swap Layers</button>
+
+<img src="image1.jpg" class="image" style="z-index: 3;"img.style.paddingLeft="1.5cm"; name="image1">
+<img src="image2.jpg" class="image" style="z-index: 2;"img.style.paddingLeft="1.5cm"; name="image2">
+<img src="image3.jpg" class="image" style="z-index: 1;"img.style.paddingLeft="1.5cm"; name="image3">
+/*xuy*/
+</main>
+</div> 
+</body>
+</html>
